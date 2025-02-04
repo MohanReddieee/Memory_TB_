@@ -14,6 +14,10 @@ function void build();
 	sqr = new("sqr",this);
 	mon = new("mon",this);
 	subs = new("subs",this);
+	drv=mem_drv::type_it::create("drv",this);
+	sqr=mem_sqr::type_it::create("sqr",this);
+	mon=mem_mon::type_it::create("mon",this);
+	subs=mem_subs::type_it::create("subs",this);
 endfunction
 function void connect();
     drv.seq_item_port.connect(sqr.seq_item_export);
